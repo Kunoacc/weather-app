@@ -55,30 +55,26 @@ export default {
   },
   methods: {
     currentLocation: function() {
-    //   if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(
-    //       this.getLocation,
-    //       this.handleLocationError,
-    //       {
-    //         enableHighAccuracy: true
-    //       }
-    //     );
-    //   }
-    this.getLocation();
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          this.getLocation,
+          this.handleLocationError,
+          {
+            enableHighAccuracy: true
+          }
+        );
+      }]
     },
     getLocation: async function(position) {
-    //   let location = await service.getLocation(
-    //     position.coords.longitude,
-    //     position.coords.latitude
-    //   );
       let location = await service.getLocation(
-        9.0546176,7.4604544
+        position.coords.longitude,
+        position.coords.latitude
       );
       this.location = `${location.data.AdministrativeArea.LocalizedName}, ${
         location.data.Country.LocalizedName
       }`;
       this.getWeatherData(location);
-    //   console.log(location);
+      console.log(location);
     },
     getWeatherData: async function(locationData) {
       let weatherData = await service.getCurrentWeather(locationData.data.Key);
@@ -87,7 +83,7 @@ export default {
       this.unit = weatherData.data[0].Temperature.Metric.Unit;
       this.weatherText = weatherData.data[0].WeatherText;
       this.isLoaded = true;
-    //   console.log(weatherData);
+      console.log(weatherData);
     },
     handleLocationError: function(error) {
       switch (error.code) {
