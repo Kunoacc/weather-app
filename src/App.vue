@@ -63,7 +63,7 @@ export default {
             enableHighAccuracy: true
           }
         );
-      }]
+      }
     },
     getLocation: async function(position) {
       let location = await service.getLocation(
