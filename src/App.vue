@@ -55,15 +55,16 @@ export default {
   },
   methods: {
     currentLocation: function() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          this.getLocation,
-          this.handleLocationError,
-          {
-            enableHighAccuracy: true
-          }
-        );
-      }
+    //   if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(
+    //       this.getLocation,
+    //       this.handleLocationError,
+    //       {
+    //         enableHighAccuracy: true
+    //       }
+    //     );
+    //   }
+    this.getLocation();
     },
     getLocation: async function(position) {
     //   let location = await service.getLocation(
