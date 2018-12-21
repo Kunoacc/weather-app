@@ -74,7 +74,7 @@ export default {
         location.data.Country.LocalizedName
       }`;
       this.getWeatherData(location);
-      console.log(location);
+    //   console.log(location);
     },
     getWeatherData: async function(locationData) {
       let weatherData = await service.getCurrentWeather(locationData.data.Key);
@@ -83,7 +83,7 @@ export default {
       this.unit = weatherData.data[0].Temperature.Metric.Unit;
       this.weatherText = weatherData.data[0].WeatherText;
       this.isLoaded = true;
-      console.log(weatherData);
+    //   console.log(weatherData);
     },
     handleLocationError: function(error) {
       switch (error.code) {

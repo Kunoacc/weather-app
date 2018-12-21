@@ -327,7 +327,7 @@ p {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url("https://uploads-ssl.webflow.com/5ad9d8744bee8e78ef66c9d1/5c1b787a1c28c1806776efba_Group.svg");
+  background-image: url("../img/bg.svg");
   background-position: 50% 100%;
   background-size: cover;
 }

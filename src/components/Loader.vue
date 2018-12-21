@@ -2,7 +2,7 @@
   <div>
     <transition name="fade">
       <img
-        src="http://samherbert.net/svg-loaders/svg-loaders/tail-spin.svg"
+        src="../assets/img/spinner.svg"
         height="150"
         alt
         srcset

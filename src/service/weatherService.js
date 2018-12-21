@@ -3,7 +3,7 @@ import 'url'
 let service;
 class weatherService {
   constructor() {
-    this.BASEURL = 'http://dataservice.accuweather.com';
+    this.BASEURL = 'https://dataservice.accuweather.com';
   }
 
   async getLocation(longtitude, latitude) {
