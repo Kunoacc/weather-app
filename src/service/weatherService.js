@@ -6,8 +6,8 @@ class weatherService {
     this.BASEURL = 'https://dataservice.accuweather.com';
   }
 
-  async getLocation(longtitude, latitude) {
-    const cords = `${longtitude},${latitude}`;
+  async getLocation(latitude, longitude) {
+    const cords = `${latitude},${longitude}`;
     const locationApiAction = 'cities/geoposition/search?';
     const params = new URLSearchParams({
       apikey: process.env.VUE_APP_ACCUWEATHER_API_KEY,

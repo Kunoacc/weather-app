@@ -67,8 +67,8 @@ export default {
     },
     getLocation: async function(position) {
       let location = await service.getLocation(
-        position.coords.longitude,
-        position.coords.latitude
+        position.coords.latitude,
+        position.coords.longitude
       );
       this.location = `${location.data.AdministrativeArea.LocalizedName}, ${
         location.data.Country.LocalizedName
